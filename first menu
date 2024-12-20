@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            /* Material Design ana renkler */
+            --md-primary: #6750A4;
+            /* Ana renk */
+            --md-on-primary: #FFFFFF;
+            /* Ana renk üzerindeki yazı rengi */
+            --md-surface: #FFFBFE;
+            /* Yüzey rengi */
+            --md-surface-variant: #E7E0EC;
+            /* Alternatif yüzey rengi */
+            --md-on-surface: #1C1B1F;
+            /* Yüzey üzerindeki yazı rengi */
+            --md-elevation-1: 0px 1px 3px rgba(0, 0, 0, 0.12);
+        }
+
+        h1 {
+            background-color: var(--md-primary);
+            color: var(--md-on-primary);
+            height: 80px;
+            text-align: center;
+            font-size: 42px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 700;
+            line-height: 80px;
+            box-shadow: var(--md-elevation-1);
+            margin: 0;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        ul {
+            display: flex;
+            list-style-type: none;
+            justify-content: center;
+            height: 56px;
+            background-color: var(--md-surface);
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            box-shadow: var(--md-elevation-1);
+        }
+
+        li {
+            position: relative;
+            padding: 0 64px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            color: var(--md-on-surface);
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: background-color 0.2s;
+        }
+
+        li:hover {
+            background-color: var(--md-surface-variant);
+            color: var(--md-primary);
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: var(--md-surface);
+            min-width: 200px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12);
+            border-radius: 4px;
+            top: 100%;
+            left: 0;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            padding: 12px 16px;
+            height: auto;
+            width: auto;
+            color: var(--md-on-surface);
+            text-decoration: none;
+            display: block;
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+
+        .dropdown-content a:hover {
+            background-color: var(--md-surface-variant);
+            color: var(--md-primary);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        a {
+            text-decoration: none !important;
+            color: inherit;
+        }
+
+        .dropdown a:hover {
+            background-color: var(--md-surface-variant);
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 12px 16px;
+        }
+
+        .menu-item {
+            padding: 0 64px;
+        }
+    </style>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1>Nexify</h1>
+    <nav>
+        <ul>
+            <li><a href="/" target="_self"><span class="menu-item">Home</span></a></li>
+            <li><a href="/about" target="_self"><span class="menu-item">About</span></a></li>
+            <li><a href="/services" target="_self"><span class="menu-item">Services</span></a></li>
+            <li class="dropdown">
+                <a href="/contact" target="_self"><span class="menu-item">Contact</span></a>
+                <div class="dropdown-content">
+                    <a href="tel:+901234567890">Phone</a>
+                    <a href="mailto:info@example.com">Email</a>
+                    <a href="https://maps.google.com" target="_blank">Address</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+</body>
+
+</html>
